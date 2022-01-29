@@ -1,0 +1,14 @@
+package my.day06;
+
+public class MyDataTest {
+    public static void main(String[] args) {
+        MyDate myDate = new MyDate();
+        myDate.day =10;
+        myDate.month=1;
+        myDate.year=2022;
+
+        System.out.println(myDate.getDay());
+        System.out.println(myDate.getMonth());
+        System.out.println(myDate.getYear());
+    }
+}

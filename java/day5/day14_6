@@ -1,0 +1,23 @@
+package my.day14;
+
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.io.Reader;
+
+public class ReaderTest {
+    public static void main(String[] args) {
+        int var = 0;
+        // new InputStreamReader(InputStream)
+        Reader reader = new InputStreamReader(System.in);
+        System.out.println("입력하세요 :");
+        try{
+            while (true){
+                var = reader.read(); //1char 문자, 한들 3byte ==> 1글자
+                if(var == 13) break; //무한반복 탈출 조건
+                System.out.println(var + "==>" + (char)var);
+                }
+            }catch (IOException e){
+               e.printStackTrace();
+        }
+    }
+}

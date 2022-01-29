@@ -1,0 +1,10 @@
+package my.day04;
+
+public class WhileTest2 {
+    public static void main(String[] args) {
+        int num = 5;
+        while(--num>0){
+            System.out.printf("*");
+        }
+    }
+}

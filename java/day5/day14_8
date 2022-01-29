@@ -1,0 +1,28 @@
+package my.day14;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+// TCP/IP 서버 프로그램
+public class TestServer {
+    //자바 네트워크 프로그램도 예외 처리는 필수다.
+    public static void main(String[] args) {
+
+        try {
+            ServerSocket serverSocket = new ServerSocket(5000);
+            System.out.println("# 서버 실행..접속쓰 대기중- #");
+            while (true){
+                Socket socket = serverSocket.accept();
+
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                System.out.println("## 클라이언트 연결됨 ##");
+                System.out.println("# 클라이언트 메시지: " + bufferedReader.readLine());
+                bufferedReader.close();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}

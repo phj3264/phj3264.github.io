@@ -1,0 +1,32 @@
+package my.day06;
+/*
+    다음 클래스를 만들고 결과값 출력
+     -나이가 40살,이름이 제임스라는 남자가 있다. 남자는 결혼을 했고 자식이 3명 있다.
+     <출력결과>
+      > 나이,이름,결혼여부(boolean isMarride),자녀수
+ */
+public class Man {
+    String name;
+    int age;
+    boolean isMarry;
+    int child;
+
+    //인자 생성자 정의
+    public Man(int age,String name,boolean isMarry,int child){
+        //맴버 변수 초기화
+        this.age = age;
+        this.name = name;
+        this.isMarry = isMarry;
+        this.child = child;
+    }
+
+    //맴버 메소드
+    public void showInfo(){
+        System.out.println("이 사람의 나이 : " +age);
+        System.out.println("이 사람의 이름 : " +name);
+        System.out.println("이 사람의 결혼 여부 : " +isMarry);
+        System.out.println("이 사람의 자녀수 : " +child);
+    }
+
+
+}

@@ -1,0 +1,23 @@
+package my.day14;
+
+import java.io.IOException;
+
+public class inputStreamTest {
+    public static void main(String[] args) throws IOException {
+        int a = 0;
+        // 입출력 프로그램은 예외처리가 필수이다.
+        try {
+            System.out.println("입력하세요: ");
+            a = System.in.read();
+            while (a != 13) { //13은 엔터키
+                System.out.println(a + "==>" + (char) a);
+                a = System.in.read();
+            }
+            System.in.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("파일이 없습니다.");
+        }
+    }
+}

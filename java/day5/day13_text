@@ -1,0 +1,20 @@
+1. JAVA 입출력(IO)
+   -import java.io
+   - Stream > 데이터의 논리적인 흐름
+
+   <자바는 크게>
+     1) 1byte(동영상,이미지등) 데이터 기반 입출력
+         -입력 스트림(inputStream), 읽기 메소드(read()) :
+              바이트 입력을 리턴하고 입력이 종료(Ctrl+D, Ctrl+Z, Ctrl+C)되면 -1리턴
+         -출력 스트림(OutputStream), 쓰기 메소드(write())
+     2) 2byte(텍스트) 데이터 기반 입출력
+         -입력(InputStreamReader), 읽기 메소드 read()
+         -출력(OutputStreamWriter), 쓰기 메소드 write()
+     3) 자바 표준입출력 객체
+         -System.in
+         -System.out
+     4) 버퍼를 이용한 입출력
+         -BuggeredReader
+         -BufferedWriter
+         -바이트 단위로 들어오고 나가는 데이터를 버퍼(메모리)에 모아 둔다.
+         -버퍼가 가득 차면(기본 버퍼 크기 :512byte) 한꺼번에 읽고,쓰기 한다.

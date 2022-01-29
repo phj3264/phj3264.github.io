@@ -1,0 +1,32 @@
+package my.day14;
+
+import java.io.*;
+
+public class FileWriterTest {
+    public static void main(String[] args) {
+        //파일 데이터 읽어와서 다시 그 내용을 파일로 쓰기
+        try{
+            File file = new File("test.txt");
+            FileReader fileReader = new FileReader(file);
+            FileWriter fileWriter = new FileWriter("test2.txt");
+
+            //필터 스트립 입력 객체 이용해서 읽어 오기
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            //필터 스트림 출력 객체 이용해서 쓰기
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            String data = null;
+
+            while((data=bufferedReader.readLine())!=null){
+                bufferedWriter.write(data + "\n");
+                bufferedWriter.flush();
+            }
+            System.out.println("파일로 쓰기 성공!!");
+            fileWriter.close();
+            fileReader.close();
+            bufferedReader.close();
+            bufferedWriter.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+}

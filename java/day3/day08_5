@@ -1,0 +1,15 @@
+package my.day08;
+
+public class Novice {  //초심자
+    String name;
+    int hp;
+    int speed;
+
+    public  void punch() {
+        System.out.printf("%s(Hp: %d)펀치 공격하다.\n",name,hp);
+    }
+
+    public  void move(){
+        System.out.printf("%d만큼 이동합니다.\n",speed);
+    }
+}

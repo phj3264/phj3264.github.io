@@ -1,0 +1,16 @@
+package my.day05;
+
+public class Dog {
+    String name;
+    int age;
+    String breeds;
+    double weight;
+
+    public void meong(){
+        System.out.println("멍멍멍");
+    }
+    public void sit(){
+        System.out.println("앉다");
+    }
+}
+

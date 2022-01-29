@@ -1,0 +1,30 @@
+package my.day04;
+
+import java.util.Random;
+
+public class MethodTest4 {
+    //반환값과 매개변수 없는 메소드
+    static void RRa(){
+        System.out.println("<<라아면 끓이는 버어어업>>");
+    }
+    static void buy(){
+        System.out.println("1.가까운 마트에서 라면을 사와요오~");
+    }
+    static void boil(){
+        System.out.println("2.물을 888끓여요오오~");
+    }
+    static void put(){
+        System.out.println("3.라면을 푸우ㅜ우ㅜㅇㄱ 넣어요오~");
+    }
+    static void eat(){
+        System.out.println("4.맛있게에에 먹어요오오오~");
+    }
+
+    public static void main(String[] args) {
+       RRa();
+       buy();
+       boil();
+       put();
+       eat();
+    }
+}

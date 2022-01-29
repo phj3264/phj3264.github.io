@@ -1,0 +1,22 @@
+package my.day14;
+
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.net.Socket;
+
+public class TestClient {
+    public static void main(String[] args) {
+        try{
+            //서버 주소와 포트번호
+            Socket socket = new Socket("127.0.0.1",5000);
+            System.out.println("## 클라이언트 실행.. ##");
+            PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
+            printWriter.println("안녕하세요? 클라이언에서 전송합니다");
+            printWriter.close();
+            System.out.println("# 클라이언트 종료 #");
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+}

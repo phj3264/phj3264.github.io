@@ -1,0 +1,30 @@
+package my.day03;
+
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
+public class OperatorEx01 {
+    //2개의 정수를 입력 받아서 둘 중 큰 수를 판단하기.
+    static  int num1,num2;
+    //2개의 정수를 입력받아서 총점과 평균을 구해서 출력하기(산술연산자)
+    static int i,j;
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("정수 1 입력 :");
+        num1 = scanner.nextInt();
+        System.out.println("정수 2 입력 :");
+        num2 = scanner.nextInt();
+
+        i= num1+num2;
+        j= i/2;
+        System.out.println("총점은 :"+i);
+        System.out.println("평균은 "+j);
+
+        //boolean res = num1 > num2;
+        //System.out.println("첫번째 정수 1이 더 크다.");
+        String res = (num1>num2)? "정수 1이 정수 2 보다 크다":"정수 1이 정수 2 보다 작다";
+        System.out.println(res);
+
+    }
+}

@@ -1,0 +1,13 @@
+package my.day01;
+
+public class DataTypeExam2 {
+    public static void main(String[] args) {
+
+        var i = 1;      // int i = 1;
+        var j = 3.12;   // double j = 3.12;
+        var str = "안녕하세요";   // String str = "안녕하세요";
+
+        System.out.println(" i: "+ i+ " j: "+j+ " str: "+str);
+
+    }
+}

@@ -1,0 +1,27 @@
+package my.day06;
+
+public class AvengerTest {
+    public static void main(String[] args) {
+        Avenger thor = new Avenger("토르",150);
+        Avenger thanos= new Avenger("타노스",160);
+        thor.punch(thanos);
+        thor.punch(thor);
+        thanos.punch(thor);
+    }
+}
+
+class Avenger{
+    String name;
+    int hp;
+
+    Avenger(String s, int i){
+        name= s;
+        hp=i;
+    }
+
+    void punch(Avenger enemy){
+        System.out.println(name+"의 펀치!");
+        enemy.hp -=10;
+        System.out.println(enemy.name+"체력 :"+enemy.hp);
+    }
+}

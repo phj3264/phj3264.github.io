@@ -1,0 +1,9 @@
+package my.day08;
+
+public class CarTest {
+    public static void main(String[] args) {
+        Car truck = new Truck("트럭",200);
+        //truck.load();
+        truck.move();
+    }
+}

@@ -1,0 +1,73 @@
+package my.day05;
+
+import javax.swing.*;
+import java.util.Scanner;
+
+/*
+   구직 등록 프로그램
+*/
+public class JobApp {
+    public void showMenu() {
+        System.out.println("********* JOB 1.0 *********");
+        System.out.println("*      1. 구직 등록         *");
+        System.out.println("*      2. 구인 등록         *");
+        System.out.println("*      3. 구직자 정보출력    *");
+        System.out.println("*      4. 구인 회사정보출력   *");
+        System.out.println("*      5. 종료             *");
+        System.out.println("****************************");
+        System.out.println("메뉴를 입력하세요>>>");
+    }
+
+    public static void inputPerson() {
+        //이름,나이,성별,전화번호
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("---구직 등록 시작---");
+        System.out.println(" 이름 입력 : ");
+        String nm = scanner.next();
+        System.out.println(" 나이 입력 : ");
+        int age = scanner.nextInt();
+        System.out.println("---성별 메뉴---");
+        System.out.println("1.남자  2. 여자");
+        System.out.println("성별 번호 입력 >>");
+        int s = scanner.nextInt();
+        char gen = 'N';
+
+        if (s == 1) gen = 'M';
+        else if (s == 2) {
+            gen = 'F';
+        }
+
+        System.out.println("전화번호 입력 : ");
+        String tel = scanner.next();
+
+        //사람 객체 생성
+        Person person1 = new Person(nm, age, gen, tel);
+        String info = person1.showProfile();
+        System.out.println(info);
+        ///////////////////////////////////
+        person1.wantJob("프로그래머", 3000);
+        ////////////////////////////////////
+    }
+
+    public static void main(String[] args) {
+        JobApp jobApp = new JobApp();
+        jobApp.showMenu();
+
+        while (true) {
+            jobApp.showMenu();
+            Scanner scanner = new Scanner(System.in);
+            int menuNo = scanner.nextInt();
+            if (menuNo == 5) {
+                System.exit(0);  //프로그램 정상종료
+            } else if (menuNo == 1) { //1. 구직등록(직장을 구하는 사람의 인적정보 입력 받음
+                JobApp.inputPerson(); // 인적 정보를 입력받는 모듈
+            } else if (menuNo == 2) { //2. 구인 등록(사람을 구하는 회사의 정보를 입력 받음
+
+            } else if (menuNo == 3) { //3. 구직자 정보 확인
+
+            } else if (menuNo == 4) { //4. 회사 정보 확인
+
+            }
+        }
+    }
+}

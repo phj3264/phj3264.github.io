@@ -1,0 +1,57 @@
+package my.day10;
+
+import jdk.jfr.Label;
+
+public class Zookeeper {
+    //호랑이에게 먹이를 주다.
+    public void feed(Tiger tiger){
+        System.out.println("feed Tiger");
+    }
+
+    //사자에게 먹이를 주다.
+    public void feed(Lion lion){
+        System.out.println("feed Lion");
+    }
+
+    //악어, 표범 육식동물에게 먹이를 주다.
+    public void feed(Crocodile crocodile){
+        System.out.println("feed crocodile");
+    }
+
+    public void feed(Leopard leopard){
+        System.out.println("feed leopard");
+    }
+
+    //문제 해결 1. 하나의 타입(동물타입)으로 매개변수 변경(업캐스팅),다운캐스팅 활용
+    public void feed(Animal animal){
+        if(animal instanceof Tiger){
+            System.out.println("feed tiger");
+        }else if (animal instanceof Lion){
+            System.out.println("feed tiger");
+        }else if (animal instanceof Crocodile){
+
+        }
+    }
+
+    public void feed(Predator predator){
+        System.out.println("feed"+predator.getName());
+    }
+
+    public static void main(String[] args){
+        Tiger tiger = new Tiger();
+        tiger.setName("tiger");
+        Lion lion = new Lion();
+        lion.setName("lion");
+        Crocodile crocodile = new Crocodile();
+        crocodile.setName("crocodile");
+        Leopard leopard = new Leopard();
+        leopard.setName("leopard");
+
+
+        Zookeeper zookeeper = new Zookeeper();
+        zookeeper.feed(tiger);
+        zookeeper.feed(lion);
+        zookeeper.feed(crocodile);
+        zookeeper.feed(leopard);
+    }
+}

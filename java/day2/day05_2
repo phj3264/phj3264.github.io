@@ -1,0 +1,21 @@
+package my.day05;
+
+import java.sql.SQLOutput;
+
+public class Cat {
+    /* 추상화
+       1. 속성,필드 : has - a
+    */
+    String name;    //이름
+    String breeds;  //품종
+    double weight;  //몸무게
+    /*
+       2. 기능,동작,메소드
+    */
+    public void craw(){
+        System.out.println("할퀴다");
+    }
+    public void meaw(){
+        System.out.println("미야오오오옹~");
+    }
+}

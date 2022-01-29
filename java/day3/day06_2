@@ -1,0 +1,12 @@
+package my.day06;
+
+public class AccountTest {
+    public static void main(String[] args) {
+        Account acc = new Account();
+        acc.setNumber(1234);
+        acc.setOwner("홍길동");
+        acc.setBalance(10000);
+        System.out.println(acc.getBalance());
+
+    }
+}
